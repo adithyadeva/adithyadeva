@@ -1,0 +1,518 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* Css Banner */
+
+body{
+    overflow-x: hidden;
+    font-size: 20px;
+}
+
+nav{
+    background: linear-gradient(rgb(0,0,0,0.28), rgb(0,0,0,0.28)), url(img/img/beratan1.jpg);
+    background-size: cover;
+    height: 660px;
+    background-repeat: no-repeat;
+    
+}
+nav .navigation{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .navigation ul{
+    display: flex;
+    list-style: none;
+    width: 30%;
+    justify-content: space-between;
+}
+
+nav .navigation ul li a{
+    font-family: 'Inter';
+    font-style: normal;
+    line-height: 36px;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow: 1px -2px 7px rgba(0,0,0,0.56);
+    transition: 0.5s;
+}
+
+nav .navigation ul li a:hover{
+    text-decoration: underline;
+    font-size: 23px;
+}
+
+
+/* Hamburger Menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -6px;
+    top: -3px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    transition: 0.5s;
+    
+}
+
+/* Hamburger menu animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px,  -1px);
+    background-color: white;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+    background-color: white;
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* Banner Css Style */
+nav .banner{ 
+    width: 80%;
+    height: 550px;
+    margin: auto;
+    text-align: center;
+}
+
+nav .banner .info{
+    display: flex;
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+}
+
+nav .banner .info h2{
+    margin-top: 10%;
+    font-size: 25px;
+    font-family: 'Rufina';
+    font-style: normal;
+    font-size: 35px;
+}
+
+nav .banner .info a{
+    width: 110px;
+    margin-top: 50px;
+    text-decoration: none;
+    font-family: 'Ruluko';
+    font-size: 25px;
+    font-style: normal;
+    color: white;
+    border: 3px solid white;
+    border-radius: 50px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+nav .banner .info a:hover{
+    transform: scale(1.2);
+}
+
+/* Kategori */
+.container{
+    width: 100%;
+}
+
+.container .kategori{
+    width: 100%;
+    margin: 70px auto;
+}
+
+.container h1{
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container .kategori .kategorinya{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.container .kategori .kategorinya a{
+    width: 257px;
+    height: 257px;
+    background-color: rgb(255, 255, 255);
+    margin: 50px;
+    border-radius: 30px;
+    transition: 0.5s;
+    box-shadow: -1px 10px 17px -7px rgba(0,0,0,0.9);
+    -webkit-box-shadow: -1px 10px 17px -7px rgba(0,0,0,0.9);
+    -moz-box-shadow: -1px 10px 17px -7px rgba(0,0,0,0.9);
+}
+.container .kategori .kategorinya a h2{
+    color: white;
+    text-align: center;
+    line-height: 257px;
+    font-size: 0em;
+    text-decoration:underline;
+    font-family: 'Ruluko', sans-serif;
+    transition: 0.5s;
+}
+.container .kategori .kategorinya a h2:hover{
+    font-size: 2em;
+}
+
+.container .kategori .kategorinya a.satu{
+    background: url(img/ktgr/tour\ kategori.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container .kategori .kategorinya a.dua{
+    background: url(img/ktgr/rafting\ katetgori.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -90px;
+}
+.container .kategori .kategorinya a.tiga{
+    background: url(img/ktgr/snorkeling3.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container .kategori .kategorinya a.empat{
+    background: url(img/ktgr/hiking.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -80px;
+}
+.container .kategori .kategorinya a.lima{
+    background: url(img/ktgr/culture.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.container .kategori .kategorinya a:hover{
+    transform: scale(1.1);
+}
+
+/* Populer Destination */
+.container .populer-destination{
+    width: 80%;
+    margin: auto;
+}
+
+.container .populer-destination .populer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 40px;
+}
+
+
+.container .populer-destination .populer a{
+    width: 100px;
+    text-align: center;
+    font-size: 2em;;
+    color: white;
+    text-decoration: none;
+    
+}
+.container .populer-destination .populer a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 150px;
+    border: 2px solid white;
+    top: 50%;
+    text-align: center;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.container .populer-destination .populer  .info{
+    position: absolute;
+    display: flex;
+    right: 30px;
+    bottom: 30px;
+    font-size: 1.5em;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.container .populer-destination .populer a:hover{
+    transform: scale(1.2);
+}
+
+.container .populer-destination .populer .kintamani{
+    position: relative;
+    width: 55%;
+    height: 376px;
+    background: url(img/wisata/kintamani.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y:-150px ;
+}
+
+.container .populer-destination .populer .ubud{
+    position: relative;
+    width: 45%;
+    height: 246px;
+    background: url(img/wisata/ubud1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container .populer-destination .populer .lempuyang{
+    position: relative;
+    width: 55%;
+    height: 293px;
+    background: url(img/wisata/lempuyang.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -150px;
+}
+.container .populer-destination .populer .tanahlot{
+    position: relative;
+    width: 45%;
+    height: 423px;
+    background: url(img/wisata/tanahlot.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -130px;
+}
+.container .populer-destination .populer .kuta{
+    position: relative;
+    width: 100%;
+    height: 247px;
+    background: url(img/wisata/kuta.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -700px;
+}
+
+
+
+@media screen and (max-width: 820px){
+    body{
+        font-size: 20px;
+    }
+    nav{
+        height: 330px;
+    }
+    nav .navigation ul{
+        width: 50%;
+    }
+
+    nav .banner{
+        width: 100%;
+        height: 180px;
+        text-align: center;
+    }
+    nav .banner .info h2{
+        font-size: 1em;
+    }
+
+    .container .kategori{
+        width: 100%;
+    }
+    .container .kategori h1{
+        font-size: 1.5em;
+    }
+
+    .container .kategori .kategorinya a{
+        width: 25%;
+        height: 200px;
+    }
+    .container .kategori .kategorinya a h2{
+        font-size: 1.5em;
+        line-height: 200px;
+    }
+
+    .container .populer-destination .populer{
+        width: 100%;  
+    }
+
+    .container .populer-destination .populer .kintamani{
+        background-position-y: 0px ;
+        
+    }
+    .container .populer-destination .populer .lempuyang{
+        background-position-y:-40px ;
+    }
+    .container .populer-destination .populer .kuta{
+        background-position-y:-440px ;
+    }
+    .container .populer-destination .populer a{
+        font-size: 1.5em;
+        
+    }
+    .container .populer-destination .populer  .info{
+        font-size: 1.2em;
+    }
+    
+    
+    
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 575px){
+    body{
+        font-size: 13px;
+    }
+    nav{
+        height:238px;
+    }
+    .navigation .menu-toggle{
+        display: flex;
+        z-index: 100;
+    }
+    nav .navigation ul{
+        position: absolute;
+        right: 0;
+        justify-content: center;
+        flex-direction: column;
+        background-color: black;
+        top: 0;
+        height: 100vh;
+        align-items: center;
+        justify-content:space-around;
+        background-color:rgb(161, 161, 161);
+        width: 80%;
+        transform: translateX(100%);
+        transition: 1s;
+        opacity: 0;
+        z-index: 12;
+    }
+
+    nav .navigation ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    nav .banner{
+        width: 100%;
+        height: 50px;
+        text-align: center;
+    }
+    nav .banner .info h2{
+        font-size: 1em;
+    }
+    nav .banner .info a{
+        margin-top: 30px;
+        font-size: 0.8em;
+    }
+
+    .container .kategori{
+        width: 100%;
+    }
+
+    .container .kategori h1{
+        font-size: 1.5em;
+    }
+
+    .container .kategori .kategorinya a{
+        width: 80%;
+    }
+
+    .container .populer-destination .populer .kintamani{
+        width: 100%;
+    }
+    
+    .container .populer-destination .populer .ubud{
+        width: 100%;
+    }
+    
+    .container .populer-destination .populer .lempuyang{
+        width: 100%;
+    }
+    .container .populer-destination .populer .tanahlot{
+        width: 100%;
+        height: 300px;
+        margin-top: 0px;
+    }
+    .container .populer-destination .populer .kuta{
+        width: 100%;
+        background-position-y: -250px;
+    }
+    .container .populer-destination .populer  .info{
+        font-size: 2em;
+    }
+    
+}
